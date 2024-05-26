@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarządzanie fakturami</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="checkbox"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        li button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        li button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zarządzanie fakturami</h1>
+
+    <div>
+        <label for="recipientInput">Odbiorca:</label>
+        <input type="text" id="recipientInput">
+    </div>
+    <div>
+        <label for="amountInput">Kwota (zł):</label>
+        <input type="number" id="amountInput">
+    </div>
+    <div>
+        <label for="dueDateInput">Termin płatności:</label>
+        <input type="date" id="dueDateInput">
+    </div>
+    <div>
+        <label for="recurringInput">Cykliczna:</label>
+        <input type="checkbox" id="recurringInput">
+    </div>
+    <button id="addButton">Dodaj fakturę</button>
+
+    <ul id="invoicesList"></ul>
+
+    <script src="app.js">
+    </script>
+</body>
+</html>
